@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mueblería</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#" id="link-carrito">Carrito (<span id="contador-carrito">0</span>)</a></li>
+                <li><a href="#" id="link-formulario">Formulario</a></li>
+            </ul>
+        </nav>
+        <h1>Mueblería</h1>
+        <p>¡Tu mueble ideal lo vas a encontrar acá!</p>
+    </header>
+
+    <main>
+        <section class="productos">
+            <article class="producto">
+                <img src="img/sofa_moderno_orval_500x.webp" alt="Sillón moderno" class="imagen-producto">
+                <h2>Sillón Moderno</h2>
+                <p>Precio: usd$200</p>
+                <button class="btn-comprar">Comprar</button>
+            </article>
+
+            <article class="producto">
+                <img src="img/Mesa-ratona-de-centro-madera-varillada-Danna-SILVINA-C-Muebleria-Decoracion.webp" alt="Mesa de centro" class="imagen-producto">
+                <h2>Mesa de Centro</h2>
+                <p>Precio: usd$150</p>
+                <button class="btn-comprar">Comprar</button>
+            </article>
+
+            <article class="producto">
+                <img src="img/Silla-nordica-madera-y-tejido-INDIA-NATURAL-Landmark-0.webp" alt="Silla estilo nórdico" class="imagen-producto">
+                <h2>Silla Estilo Nórdico</h2>
+                <p>Precio: usd$80</p>
+                <button class="btn-comprar">Comprar</button>
+            </article>
+        </section>
+
+        <section class="formulario">
+            <h2>Formulario de Contacto</h2>
+            <form id="contact-form">
+                <input type="text" id="nombre" placeholder="Tu nombre" required>
+                <input type="email" id="email" placeholder="Tu email" required>
+                <input type="text" id="telefono" placeholder="Tu teléfono" required>
+                <button type="submit">Enviar</button>
+            </form>
+            <div id="mensaje"></div>
+        </section>
+
+        <section class="carrito">
+            <h2>Carrito de Compras</h2>
+            <ul id="lista-carrito"></ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2024 Tienda de Muebles D.L</p>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
