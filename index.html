@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mueblería</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 
 <body>
-
     <header>
         <nav>
             <ul>
@@ -22,28 +22,7 @@
     </header>
 
     <main>
-        <section class="productos">
-            <article class="producto">
-                <img src="img/sofa_moderno_orval_500x.webp" alt="Sillón moderno" class="imagen-producto">
-                <h2>Sillón Moderno</h2>
-                <p>Precio: usd$200</p>
-                <button class="btn-comprar">Comprar</button>
-            </article>
-
-            <article class="producto">
-                <img src="img/Mesa-ratona-de-centro-madera-varillada-Danna-SILVINA-C-Muebleria-Decoracion.webp" alt="Mesa de centro" class="imagen-producto">
-                <h2>Mesa de Centro</h2>
-                <p>Precio: usd$150</p>
-                <button class="btn-comprar">Comprar</button>
-            </article>
-
-            <article class="producto">
-                <img src="img/Silla-nordica-madera-y-tejido-INDIA-NATURAL-Landmark-0.webp" alt="Silla estilo nórdico" class="imagen-producto">
-                <h2>Silla Estilo Nórdico</h2>
-                <p>Precio: usd$80</p>
-                <button class="btn-comprar">Comprar</button>
-            </article>
-        </section>
+        <section class="productos"></section>
 
         <section class="formulario">
             <h2>Formulario de Contacto</h2>
@@ -59,6 +38,8 @@
         <section class="carrito">
             <h2>Carrito de Compras</h2>
             <ul id="lista-carrito"></ul>
+            <button id="vaciar-carrito">Vaciar Carrito</button>
+            <button id="comprar">Comprar</button>
         </section>
     </main>
 
@@ -68,4 +49,5 @@
 
     <script src="main.js"></script>
 </body>
+
 </html>
