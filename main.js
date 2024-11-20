@@ -83,27 +83,6 @@ btnComprar.addEventListener('click', () => {
     }
 });
 
-// Cargar productos desde JSON
-fetch('productos.json')
-    .then(response => response.json())
-    .then(productos => {
-        productos.forEach(producto => {
-            const articulo = document.createElement('article');
-            articulo.classList.add('producto');
-            articulo.innerHTML = `
-                <img src="${producto.imagen}" alt="${producto.nombre}" class="imagen-producto">
-                <h2>${producto.nombre}</h2>
-                <p>Precio: usd$${producto.precio}</p>
-                <button class="btn-comprar">Comprar</button>
-            `;
-            contenedorProductos.appendChild(articulo);
-
-            articulo.querySelector('.btn-comprar').addEventListener('click', () => {
-                agregarAlCarrito(producto.nombre);
-            });
-        });
-    });
-
 // Navegación entre carrito y formulario
 linkCarrito.addEventListener('click', () => {
     document.querySelector('.formulario').style.display = 'none';
