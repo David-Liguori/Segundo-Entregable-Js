@@ -1,4 +1,5 @@
 [
+<<<<<<< HEAD
         {
             "nombre": "Sillón Moderno",
             "precio": 200,
@@ -16,3 +17,21 @@
         }
     
 ]
+=======
+    {
+        "nombre": "Sillón Moderno",
+        "precio": 200,
+        "imagen": "img/sofa_moderno_orval_500x.webp"
+    }
+    {
+        "nombre": "Mesa de Centro",
+        "precio": 150,
+        "imagen": "img/Mesa-ratona-de-centro-madera-varillada-Danna-SILVINA-C-Muebleria-Decoracion.webp"
+    }
+    {
+        "nombre": "Silla Estilo Nórdico",
+        "precio": 80,
+        "imagen": "img/Silla-nordica-madera-y-tejido-INDIA-NATURAL-Landmark-0.webp"
+    }
+]
+>>>>>>> 0fdc4d30224f2e401de9bf1f40f9b351fb18866e

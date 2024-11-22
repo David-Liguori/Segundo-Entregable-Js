@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 // Elementos del DOM
+=======
+>>>>>>> 0fdc4d30224f2e401de9bf1f40f9b351fb18866e
 const form = document.getElementById('contact-form');
 const mensajeDiv = document.getElementById('mensaje');
 const listaCarrito = document.getElementById('lista-carrito');
@@ -86,6 +89,7 @@ btnComprar.addEventListener('click', () => {
     }
 });
 
+<<<<<<< HEAD
 // Cargar productos desde JSON
 function cargarProductos() {
     fetch('productos.json')
@@ -131,3 +135,61 @@ function inicializarVistas() {
         document.querySelector('.formulario').style.display = 'block';
     });
 }
+=======
+// Navegación entre carrito y formulario
+linkCarrito.addEventListener('click', () => {
+    document.querySelector('.formulario').style.display = 'none';
+    document.querySelector('.carrito').style.display = 'block';
+});
+
+linkFormulario.addEventListener('click', () => {
+    document.querySelector('.carrito').style.display = 'none';
+    document.querySelector('.formulario').style.display = 'block';
+});
+
+// Inicializar vistas
+document.querySelector('.carrito').style.display = 'none';
+
+document.addEventListener('DOMContentLoaded', () => {
+    const productosSection = document.querySelector('.productos');
+  
+    // Carga los productos desde el archivo JSON
+    fetch('productos.json')
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error('Error al cargar el archivo JSON');
+        }
+        return response.json();
+      })
+      .then((productos) => {
+       
+        // Genera los productos en el DOM
+        productos.forEach((producto) => {
+          const productoHTML = `
+            <article class="producto">
+              <img src="${producto.imagen}" alt="${producto.nombre}" class="imagen-producto">
+              <h2>${producto.nombre}</h2>
+              <p>Precio: usd$${producto.precio}</p>
+              <button class="btn-comprar" data-id="${producto.id}">Comprar</button>
+            </article>
+          `;
+          productosSection.innerHTML += productoHTML;
+        });
+  
+        // Agrega eventos a los botones después de cargarlos
+        const comprarBtns = document.querySelectorAll('.btn-comprar');
+        comprarBtns.forEach((btn) => {
+          btn.addEventListener('click', () => {
+            const productoNombre = btn.parentElement.querySelector('h2').innerText;
+            agregarAlCarrito(productoNombre);
+            mostrarMensaje(`Has agregado "${productoNombre}" a tu carrito.`);
+          });
+        });
+      })
+      .catch((error) => {
+        console.error(error);
+        mostrarMensaje('Hubo un error al cargar los productos.');
+      });
+  });
+  
+>>>>>>> 0fdc4d30224f2e401de9bf1f40f9b351fb18866e
